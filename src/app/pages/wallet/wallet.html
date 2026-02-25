@@ -1,0 +1,29 @@
+<div class="page">
+
+  <h2 class="title">Wallet</h2>
+
+  <div class="cards">
+
+    <!-- Balance Card -->
+    <div class="card balance">
+      <h3>Wallet Balance</h3>
+      <p class="amount">₹ {{ balance }}</p>
+    </div>
+
+    <!-- Deposit Card -->
+    <div class="card deposit">
+      <h3>Deposit Money</h3>
+      <input type="number" [(ngModel)]="depositAmount" placeholder="Enter amount">
+      <button (click)="deposit()">Deposit</button>
+    </div>
+
+    <!-- Withdraw Card -->
+    <div class="card withdraw">
+      <h3>Withdraw Money</h3>
+      <input type="number" [(ngModel)]="withdrawAmount" placeholder="Enter amount">
+      <button (click)="withdraw()">Withdraw</button>
+    </div>
+
+  </div>
+
+</div>

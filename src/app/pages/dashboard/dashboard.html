@@ -1,0 +1,56 @@
+<h2 class="title">Dashboard</h2>
+
+<!-- CARDS -->
+<div class="cards">
+
+  <!-- Total Users -->
+  <div class="card users">
+    <p class="label">Total Users</p>
+    <h3>{{ totalUsers }}</h3>
+  </div>
+
+  <!-- Wallet Balance -->
+  <div class="card balance">
+    <p class="label">Wallet Balance</p>
+    <h3>₹ {{ balance }}</h3>
+  </div>
+
+  <!-- Transactions Count -->
+  <div class="card txns">
+    <p class="label">Transactions</p>
+    <h3>{{ transactions.length }}</h3>
+  </div>
+
+</div>
+
+<!-- TABLE -->
+<h2 class="section-title">Recent Transactions</h2>
+
+<table class="txn-table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Type</th>
+      <th>Amount</th>
+      <th>Status</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let txn of transactions">
+      <td>#{{ txn.id }}</td>
+      <td>{{ txn.type }}</td>
+
+      <td [ngClass]="txn.amount > 0 ? 'credit' : 'debit'">
+        {{ txn.amount > 0 ? '+' : '' }} ₹{{ txn.amount }}
+      </td>
+
+      <td [ngClass]="txn.status === 'Success' ? 'success' : 'pending'">
+        {{ txn.status }}
+      </td>
+
+      <td>{{ txn.date }}</td>
+    </tr>
+  </tbody>
+</table>

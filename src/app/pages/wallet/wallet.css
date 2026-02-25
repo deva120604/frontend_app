@@ -1,0 +1,56 @@
+.page {
+  padding: 20px;
+}
+
+.title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  flex: 1;
+  padding: 20px;
+  border-radius: 12px;
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.amount {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Card Colors same as dashboard */
+.balance {
+  background: linear-gradient(45deg, #4caf50, #66bb6a);
+}
+
+.deposit {
+  background: linear-gradient(45deg, #2196f3, #42a5f5);
+}
+
+.withdraw {
+  background: linear-gradient(45deg, #ff5722, #ff7043);
+}

@@ -1,0 +1,92 @@
+.title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 220px;
+  padding: 20px;
+  border-radius: 12px;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+  font-size: 28px;
+  margin: 10px 0 0;
+}
+
+.label {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* Card Colors */
+.users {
+  background: linear-gradient(135deg, #42a5f5, #1e88e5);
+}
+
+.balance {
+  background: linear-gradient(135deg, #66bb6a, #43a047);
+}
+
+.txns {
+  background: linear-gradient(135deg, #ff7043, #f4511e);
+}
+.section-title {
+  margin: 30px 0 15px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.txn-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.txn-table th,
+.txn-table td {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.txn-table thead {
+  background: #f5f5f5;
+}
+
+.txn-table tr:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+/* Status & Amount colors */
+.credit {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.debit {
+  color: #c62828;
+  font-weight: 600;
+}
+
+.success {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.pending {
+  color: #ef6c00;
+  font-weight: 600;
+}

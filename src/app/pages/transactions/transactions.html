@@ -1,0 +1,25 @@
+<div class="page">
+  <h2>Transactions</h2>
+
+  <div class="table-card">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Amount</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let t of transactions">
+          <td>{{t.id}}</td>
+          <td [style.color]="t.amount > 0 ? 'green' : 'red'">
+            ₹ {{t.amount}}
+          </td>
+          <td>{{t.amount > 0 ? 'Credit' : 'Debit'}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

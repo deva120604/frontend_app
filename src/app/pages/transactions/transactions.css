@@ -1,0 +1,52 @@
+.page {
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.table-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: #f5f7fa;
+}
+
+th {
+  text-align: left;
+  padding: 12px;
+  font-weight: 600;
+  color: #333;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+tr:hover {
+  background: #f9fafc;
+}
+
+/* Credit & Debit Colors */
+.credit {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.debit {
+  color: #d32f2f;
+  font-weight: 600;
+}
