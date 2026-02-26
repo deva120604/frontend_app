@@ -1,8 +1,18 @@
 import { Routes } from '@angular/router';
 
+import { LoginComponent } from '@app/pages/login/components/login/login.component';
+import { RegisterComponent } from '@app/pages/login/components/register/register.component';
+
 export const routes: Routes = [
 
-  // ⭐ MAIN LAYOUT ROUTES
+  // ⭐ DEFAULT ROUTE → LOGIN FIRST
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+
+  // ⭐ AUTH ROUTES (NO LAYOUT)
+  { path: 'login', component: LoginComponent },
+  { path: 'register', component: RegisterComponent },
+
+  // ⭐ MAIN APP ROUTES WITH LAYOUT
   {
     path: '',
     loadComponent: () =>
@@ -10,49 +20,13 @@ export const routes: Routes = [
         .then(m => m.MainLayoutComponent),
 
     children: [
-
-      // Dashboard
-      {
-        path: 'dashboard',
-        loadComponent: () =>
-          import('./pages/dashboard/dashboard')
-            .then(m => m.DashboardComponent)
-      },
-
-      // ✅ Wallet Page (NEW)
-      {
-        path: 'wallet',
-        loadComponent: () =>
-          import('./pages/wallet/wallet')
-            .then(m => m.WalletComponent)
-      },
-      {
-  path: 'transactions',
-  loadComponent: () =>
-    import('./pages/transactions/transactions')
-      .then(m => m.TransactionsComponent)
-},
-{
-  path: 'settings',
-  loadComponent: () =>
-    import('./pages/settings/settings')
-      .then(m => m.SettingsComponent)
-},
-
+      { path: 'dashboard', loadComponent: () => import('./pages/dashboard/dashboard').then(m => m.DashboardComponent) },
+      { path: 'wallet', loadComponent: () => import('./pages/wallet/wallet').then(m => m.WalletComponent) },
+      { path: 'transactions', loadComponent: () => import('./pages/transactions/transactions').then(m => m.TransactionsComponent) },
+      { path: 'settings', loadComponent: () => import('./pages/settings/settings').then(m => m.SettingsComponent) }
     ]
   },
 
-  // ⭐ DEFAULT ROUTE → Dashboard
-  {
-    path: '',
-    redirectTo: 'dashboard',
-    pathMatch: 'full'
-  },
-
   // ⭐ FALLBACK
-  {
-    path: '**',
-    redirectTo: 'dashboard'
-  },
- 
+  { path: '**', redirectTo: 'login' }
 ];
