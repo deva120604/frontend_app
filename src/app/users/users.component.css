@@ -1,0 +1,29 @@
+.content{
+  margin-left:220px;
+  padding:20px;
+}
+
+/* Table styling */
+table{
+  border-collapse: collapse;
+  width:500px;
+  margin-top:20px;
+}
+
+th, td{
+  border:1px solid #ccc;
+  padding:10px;
+}
+
+th{
+  background:#f2f2f2;
+}
+
+/* Logout button */
+button{
+  padding:8px 15px;
+  border:none;
+  background:red;
+  color:white;
+  cursor:pointer;
+}

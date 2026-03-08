@@ -1,0 +1,13 @@
+.content{
+margin-left:220px;
+padding:20px;
+}
+
+table{
+border-collapse:collapse;
+width:70%;
+}
+
+th{
+background:#f2f2f2;
+}

@@ -1,0 +1,29 @@
+<app-sidebar></app-sidebar>
+
+<div class="content">
+
+<h2>Trade Monitoring</h2>
+
+<a routerLink="/dashboard">Back to Dashboard</a>
+
+<br><br>
+
+<table>
+
+<tr>
+<th>Trade ID</th>
+<th>User</th>
+<th>Amount</th>
+<th>Status</th>
+</tr>
+
+<tr *ngFor="let trade of trades">
+<td>{{trade.id}}</td>
+<td>{{trade.user}}</td>
+<td>{{trade.amount}}</td>
+<td>{{trade.status}}</td>
+</tr>
+
+</table>
+
+</div>

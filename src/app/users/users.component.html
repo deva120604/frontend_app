@@ -1,0 +1,33 @@
+<app-sidebar></app-sidebar>
+
+<div class="content">
+
+<h2>Users List</h2>
+
+<div class="top-actions">
+
+<a routerLink="/dashboard">Back to Dashboard</a>
+
+<button (click)="logout()">Logout</button>
+
+</div>
+
+<br>
+
+<table border="1" cellpadding="10">
+
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
+</tr>
+
+<tr *ngFor="let user of users">
+<td>{{user.id}}</td>
+<td>{{user.name}}</td>
+<td>{{user.email}}</td>
+</tr>
+
+</table>
+
+</div>
