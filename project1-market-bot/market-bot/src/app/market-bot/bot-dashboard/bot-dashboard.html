@@ -1,0 +1,18 @@
+<h2>Market Making Bot Dashboard</h2>
+
+<div class="card">
+
+<p><b>Status:</b> {{status}}</p>
+<p><b>Active Pair:</b> BTC/USDT</p>
+<p><b>Total Orders:</b> {{orders}}</p>
+<p><b>Total Profit:</b> ${{profit}}</p>
+
+<button class="button start" (click)="toggleBot()" *ngIf="status=='Stopped'">
+Start Bot
+</button>
+
+<button class="button stop" (click)="toggleBot()" *ngIf="status=='Running'">
+Stop Bot
+</button>
+
+</div>

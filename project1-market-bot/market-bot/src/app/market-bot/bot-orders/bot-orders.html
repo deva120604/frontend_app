@@ -1,0 +1,25 @@
+<h2>Bot Orders</h2>
+
+<div class="card">
+
+<table border="1" width="100%">
+
+<tr>
+<th>ID</th>
+<th>Type</th>
+<th>Price</th>
+<th>Volume</th>
+</tr>
+
+<tr *ngFor="let order of orders">
+
+<td>{{order.id}}</td>
+<td>{{order.type}}</td>
+<td>{{order.price}}</td>
+<td>{{order.volume}}</td>
+
+</tr>
+
+</table>
+
+</div>

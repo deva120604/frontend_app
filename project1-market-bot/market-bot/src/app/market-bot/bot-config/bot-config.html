@@ -1,0 +1,22 @@
+<h2>Bot Configuration</h2>
+
+<div class="card">
+
+<label>Trading Pair</label>
+<input [(ngModel)]="pair">
+
+<br><br>
+
+<label>Spread %</label>
+<input type="number" [(ngModel)]="spread">
+
+<br><br>
+
+<label>Order Size</label>
+<input type="number" [(ngModel)]="orderSize">
+
+<br><br>
+
+<button class="button start" (click)="save()">Save Config</button>
+
+</div>
